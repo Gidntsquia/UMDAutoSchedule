@@ -1,4 +1,5 @@
 import requests
+
 headers = {
   'Accept': 'application/json'
 }
@@ -17,7 +18,8 @@ headers = {
 
 r = requests.get('https://api.planetterp.com/v1/grades', headers = headers, params={
       'course': 'ENGL101',
-      'professor': 'William Pittman'
+      'professor': 'William Pittman',
+      'semester': '202108'
 })
 
 print(r.json())
